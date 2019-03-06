@@ -9,14 +9,16 @@ public class LearnFIrstColumnSimple {
                 {0,0,1},
                 {1,1,1},
                 {1,0,1},
-                {0,1,1}
+                {0,1,1},
+                {1,1,0}
         });
 
         Matrix outputs = new Matrix(new double[][]{
                 {0},
                 {1},
+                {0},
                 {1},
-                {0}
+                {1}
         });
 
         System.out.println("Training the neural net...");
@@ -36,7 +38,7 @@ public class LearnFIrstColumnSimple {
             + inputs.data[0][0] + " "
             + inputs.data[0][1] + " "
             + inputs.data[0][2] + " -> "
-            + net.getOutput().data[0][0] + ", expected -> " + inputs.data[0][0]);
+            + net.getOutput().data[0][0] + ", expected -> " + inputs.data[0][1]);
 
     }
 
